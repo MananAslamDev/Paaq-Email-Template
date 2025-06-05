@@ -1,0 +1,935 @@
+/* Font Faces */
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://paaq-storage-new.s3.us-east-1.amazonaws.com/imagess/fonts/Sofia Pro Regular Az.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://paaq-storage-new.s3.us-east-1.amazonaws.com/imagess/fonts/Sofia Pro Bold Az.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Using Inter as a fallback for Circular Std since it's similar and free */
+@font-face {
+  font-family: "Circular Std";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Base Body Styling */
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Circular Std", "Sofia Pro", Arial, sans-serif;
+  min-height: 100vh;
+  width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Container */
+.container {
+  max-width: 441px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 18px;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Header Banner */
+.header-banner {
+  background: url("https://paaq-storage-new.s3.us-east-1.amazonaws.com/images/paaq.png") center center/cover no-repeat, black;
+  border-radius: 18px;
+  margin: 2px 0 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  width: 100%;
+  max-width: 403px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+  z-index: 10;
+  background: transparent;
+}
+
+.header-content h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Phone Image */.phone-image {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -26px;
+  margin-left: 33px;
+}
+
+.phone-image img {
+  z-index: 100;
+  width: 301px;
+  height: auto;
+  max-width: 100%;
+  margin-top: 100;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.left-bubble {
+  bottom: 80px;
+  left: 96px;
+}
+
+.right-bubble {
+  right: 128px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-bubble .avatar {
+  background-color: #b45309;
+}
+
+.right-bubble .avatar {
+  background-color: #f59e0b;
+}
+
+.bubble {
+  background-color: #2dd4bf;
+  color: white;
+  padding: 0 24px;
+  border-radius: 9999px;
+  border: 2px solid white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+}
+
+.right-bubble .bubble {
+  background-color: #60a5fa;
+  margin-right: -18px;
+}
+
+.left-bubble .bubble {
+  margin-left: -18px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background-color: white;
+  border-radius: 18px;
+  margin: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Welcome Section */
+.welcome-bg {
+  background-color: #f3f4f6;
+  border-radius: 18px;
+  padding: 32px 16px;
+  margin: 32px auto;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.welcome-bg .icons-container {
+  padding-top: 20px; /* Push icons lower within the container */
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-bg .benefits-text {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.welcome-section h2,
+.welcome-section h3 {
+  font-family: "Circular Std", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90.42deg, #00b5b4 2.2%, #1591cb 94.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.welcome-section h2 {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.welcome-section h3 {
+  margin-bottom: 16px;
+}
+
+.pronunciation {
+  font-family: "Circular Std", sans-serif;
+  color: #919191;
+  font-weight: 500;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.pronunciation span {
+  font-family: "Circular Std", sans-serif;
+  color: #190000;
+  font-weight: 500;
+}
+
+.welcome-section h4 {
+  font-family: "Circular Std", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #190000;
+  margin-bottom: 32px;
+}
+
+/* Session Section */
+.session-section {
+  background-color: #f3f4f6;
+  border-radius: 18px;
+  padding: 32px 16px;
+  margin: 32px auto;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.icons-container {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  border: 0.5px solid #d9d9d9;
+  display: block;
+  width: auto;
+  max-width: 266px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.icon-grid {
+  display: table;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.icon-img {
+  width: 89px;
+  height: 93px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+  margin: 8px;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.icon-img:hover {
+  transform: scale(1.05);
+}
+
+.welcome-icons {
+  margin-top: -15px;
+}
+
+.benefits-text {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #7e7878;
+  line-height: 1.5;
+}
+
+.benefits-text span {
+  font-weight: bold;
+  color: #111827;
+}
+
+.session-text {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  max-width: 90%;
+  color: #7e7878;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.session-text span:nth-child(2) {
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Verification Section */
+.verification-section {
+  background-color: #f3f4f6;
+  border-radius: 18px;
+  padding: 32px 16px;
+  margin: 32px auto;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.verification-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.verification-badge img {
+  width: 80px;
+  height: 80px;
+}
+
+.profile-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 9999px;
+  border: 2px solid #d1d5db;
+  margin-bottom: 32px;
+}
+
+.profile-images img {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  max-width: 200px;
+}
+
+.verification-text {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  color: #7e7878;
+}
+
+.verification-text span:nth-child(2),
+.verification-text span:nth-child(4) {
+  font-weight: bold;
+  color: #111827;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f3f4f6;
+  border-radius: 18px;
+  margin: 32px 16px 0;
+  padding: 1px 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.faq-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00b5b4 0%, #1591cb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.faq-items {
+  display: block;
+  width: 100%;
+}
+
+.faq-item {
+  margin-bottom: 32px;
+}
+
+.faq-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.faq-item-header .dot {
+  font-size: 20px;
+  color: #111827;
+  line-height: 1;
+}
+
+.faq-item h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111827;
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+.faq-item p {
+  color: #7e7878;
+  margin-left: 14px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 16px;
+  width: 100%;
+  max-width: 441px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.footer-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #4d4e52;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 10px 8px;
+  transition: none;
+}
+
+.footer-links a:hover {
+  color: #4d4e52;
+}
+
+.footer-links span {
+  color: #b0b0b0;
+  font-size: 14px;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.download-icons {
+  text-align: center;
+  padding-top: 20px; /* Add padding before download buttons */
+  margin-top: 15px;
+}
+
+.download-store-buttons {
+  transition: transform 0.2s;
+  width: 122px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+.download-store-buttons:hover {
+  transform: scale(1.05);
+}
+
+.personal-message {
+  color: #00000066;
+  font-size: 9px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.copyright {
+  font-size: 9px;
+  color: #00000066;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.copyright p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.address {
+  color: #00000066;
+  font-size: 9px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.address p {
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+ 
+  
+  .header-banner {
+    width: 100%;
+    max-width: 380px;
+    margin: 16px 0 0;
+    min-height: 160px;
+  }
+  
+  .header-content {
+    padding: 32px 8px;
+  }
+  
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .phone-image {
+    margin-left: 38px;
+    margin-top: -105px;
+  }
+
+  .phone-image img {
+    width: 280px;
+    max-width: 90%;
+    margin-top: 80px;
+  }
+
+  .left-bubble {
+    bottom: 40px;
+    left: 25px;
+  }
+
+  .right-bubble {
+    right: 25px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bubble {
+    padding: 0 16px;
+    font-size: 12px;
+  }
+  
+  /* .content-wrapper {
+    margin: 0 8px;
+    padding: 8px;
+  }
+  
+  .welcome-bg {
+    padding: 16px 8px;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+  
+  .welcome-bg .icons-container {
+    padding-top: 15px;
+  }
+
+  .welcome-section h2,
+  .welcome-section h3 {
+    font-size: 20px;
+  }
+
+  .welcome-section h4 {
+    font-size: 18px;
+  }
+
+  .icons-container {
+    padding: 15px 8px;
+    max-width: 100%;
+  }
+
+  .icon-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin: 6px;
+  }
+
+  .welcome-icons {
+    margin-top: 0;
+  }
+
+  .session-section {
+    padding: 16px 8px;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  .benefits-text,
+  .session-text,
+  .verification-text {
+    font-size: 16px;
+  } */
+
+  /* .verification-section {
+    padding: 16px 8px;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  .verification-badge img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-images img {
+    max-width: 150px;
+  }
+
+  .footer {
+    padding: 10px 8px;
+    max-width: 100%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .download-icons {
+    padding-top: 15px;
+    margin-top: 10px;
+  }
+
+  .download-store-buttons {
+    width: 110px;
+    height: 36px;
+    margin: 5px 10px;
+  }
+
+  .faq-section {
+    padding: 1px 16px;
+    margin: 16px 8px 0;
+    max-width: 100%;
+  }
+
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .faq-item h3,
+  .faq-item p {
+    font-size: 13px;
+  } */
+}
+
+@media (max-width: 425px) {
+
+  .header-banner {
+    width: 100%;
+    max-width: 380px;
+    margin: 16px 0 0;
+    min-height: 160px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .phone-image {
+    margin-left: 35px;
+    margin-top: -105px;
+  }
+
+  .phone-image img {
+    width: 280px;
+    max-width: 90%;
+    margin-top: 80px;
+  }
+
+  .left-bubble {
+    bottom: 30px;
+    left: 15px;
+  }
+
+  .right-bubble {
+    right: 15px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .bubble {
+    padding: 0 12px;
+    font-size: 10px;
+  }
+ 
+  .welcome-bg {
+    padding: 12px 6px;
+  }
+
+  .welcome-bg .icons-container {
+    padding-top: 10px;
+  }
+/*
+  .welcome-section h2,
+  .welcome-section h3 {
+    font-size: 18px;
+  }
+
+  .welcome-section h4 {
+    font-size: 16px;
+  }
+
+  .icons-container {
+    padding: 10px 6px;
+  }
+
+  .icon-img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+  }
+
+  .welcome-icons {
+    margin-top: 0;
+  }
+
+  .benefits-text,
+  .session-text,
+  .verification-text {
+    font-size: 14px;
+  }
+
+  .session-section {
+    padding: 12px 6px;
+    margin: 12px auto;
+  }
+
+  .verification-section {
+    padding: 12px 6px;
+    margin: 12px auto;
+  }
+
+  .verification-badge img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-images img {
+    max-width: 120px;
+  }
+
+  .footer {
+    padding: 8px 6px;
+  }
+
+  .download-icons {
+    padding-top: 10px;
+    margin-top: 8px;
+  }
+
+  .download-store-buttons {
+    width: 100px;
+    height: 32px;
+    margin: 5px;
+  }
+
+  .faq-section {
+    padding: 1px 12px;
+    margin: 12px 6px 0;
+  }
+
+  .faq-section h2 {
+    font-size: 20px;
+  }
+
+  .faq-item h3,
+  .faq-item p {
+    font-size: 12px;
+  } */
+}
+
+@media (max-width: 380px) {
+  .phone-image {
+    margin-left: 20px;
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .header-banner {
+    min-height: 160px;
+  }
+
+  .header-content h1 {
+    font-size: 20px;
+  }
+
+  .phone-image {
+    margin-left: auto;
+    margin-top: -100px;
+  }
+
+  .phone-image img {
+    width: 280px;
+    max-width: 90%;
+    margin-top: 80px;
+  }
+
+  .left-bubble {
+    bottom: 20px;
+    left: 10px;
+  }
+
+  .right-bubble {
+    right: 10px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bubble {
+    padding: 0 10px;
+    font-size: 8px;
+  }
+
+  /* .welcome-bg {
+    padding: 10px 4px;
+  }
+
+  .welcome-bg .icons-container {
+    padding-top: 8px;
+  }
+
+  .welcome-section h2,
+  .welcome-section h3 {
+    font-size: 16px;
+  }
+
+  .welcome-section h4 {
+    font-size: 14px;
+  }
+
+  .icons-container {
+    padding: 8px 4px;
+  }
+
+  .icon-img {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+  }
+
+  .benefits-text,
+  .session-text,
+  .verification-text {
+    font-size: 12px;
+  }
+
+  .session-section {
+    padding: 10px 4px;
+    margin: 10px auto;
+  }
+
+  .verification-section {
+    padding: 10px 4px;
+    margin: 10px auto;
+  }
+
+  .verification-badge img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-images img {
+    max-width: 100px;
+  }
+
+  .footer {
+    padding: 6px 4px;
+  }
+
+  .download-icons {
+    padding-top: 8px;
+    margin-top: 6px;
+  }
+
+  .download-store-buttons {
+    width: 90px;
+    height: 30px;
+    margin: 3px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .faq-section {
+    padding: 1px 10px;
+    margin: 10px 4px 0;
+  }
+
+  .faq-section h2 {
+    font-size: 18px;
+  }
+
+  .faq-item h3,
+  .faq-item p {
+    font-size: 11px;
+  }
+
+  .personal-message,
+  .copyright,
+  .address {
+    font-size: 8px;
+  }*/
+} 
